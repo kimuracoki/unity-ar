@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import {
   ZapparCamera,
@@ -12,6 +12,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import glb from "./assets/waving.glb";
 import targetImage from "./assets/example-tracking-image.zpt";
+import soundFile from "./assets/sound.mp3";  // 音声ファイルのインポート
 
 let action: THREE.AnimationAction;
 
@@ -29,13 +30,22 @@ const Model = () => {
 };
 
 function App() {
+  // 音声ファイルのオーディオオブジェクト
+  const audio = new Audio(soundFile);
+
+  // ボタンがクリックされた時にアニメーションと音声を再生
+  const handleClick = () => {
+    action.play();
+    audio.play();
+  };
+
   return (
     <>
       <BrowserCompatibility />
       <ZapparCanvas>
-      <ZapparCamera {...({} as any)} />
-      <Suspense fallback={null}>
-          <ImageTracker targetImage={targetImage}  {...({} as any)}>
+        <ZapparCamera {...({} as any)} />
+        <Suspense fallback={null}>
+          <ImageTracker targetImage={targetImage} {...({} as any)}>
             <React.Suspense fallback={null}>
               <Model />
             </React.Suspense>
@@ -47,9 +57,8 @@ function App() {
       <div
         id="zappar-button"
         role="button"
-        onKeyPress={() => action.play()}
         tabIndex={0}
-        onClick={() => action.play()}
+        onClick={handleClick}  // ボタンクリック時に音声とアニメーションを再生
       >
         Play Animation
       </div>
