@@ -10,8 +10,8 @@ import {
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-import glb from "./assets/waving.glb";
-import targetImage from "./assets/example-tracking-image.zpt";
+import glb from "/unity-ar/waving.glb";
+import targetImage from "/unity-ar/example-tracking-image.zpt";
 
 let action: THREE.AnimationAction;
 
@@ -33,171 +33,9 @@ function App() {
     <>
       <BrowserCompatibility />
       <ZapparCanvas>
-        <ZapparCamera
-          key={undefined}
-          rotateX={undefined}
-          children={undefined}
-          id={undefined}
-          attach={undefined}
-          onUpdate={undefined}
-          args={undefined}
-          backgroundTexture={undefined}
-          rawPose={undefined}
-          poseAnchorOrigin={undefined}
-          isPerspectiveCamera={undefined}
-          rearCameraSource={undefined}
-          userCameraSource={undefined}
-          stop={undefined}
-          setPoseModeAnchorOrigin={undefined}
-          currentMirrorMode={undefined}
-          handleColorSpace={undefined}
-          updateFrame={undefined}
-          _updateProjectionMatrix={undefined}
-          updateMatrixWorld={undefined}
-          matrixWorldInverse={undefined}
-          projectionMatrix={undefined}
-          projectionMatrixInverse={undefined}
-          isCamera={undefined}
-          getWorldDirection={undefined}
-          uuid={undefined}
-          name={undefined}
-          type={undefined}
-          parent={undefined}
-          modelViewMatrix={undefined}
-          normalMatrix={undefined}
-          matrixWorld={undefined}
-          matrixAutoUpdate={undefined}
-          matrixWorldAutoUpdate={undefined}
-          matrixWorldNeedsUpdate={undefined}
-          visible={undefined}
-          castShadow={undefined}
-          receiveShadow={undefined}
-          frustumCulled={undefined}
-          renderOrder={undefined}
-          userData={undefined}
-          customDepthMaterial={undefined}
-          customDistanceMaterial={undefined}
-          isObject3D={undefined}
-          onBeforeRender={undefined}
-          onAfterRender={undefined}
-          applyMatrix4={undefined}
-          applyQuaternion={undefined}
-          setRotationFromAxisAngle={undefined}
-          setRotationFromEuler={undefined}
-          setRotationFromMatrix={undefined}
-          setRotationFromQuaternion={undefined}
-          rotateOnAxis={undefined}
-          rotateOnWorldAxis={undefined}
-          rotateY={undefined}
-          rotateZ={undefined}
-          translateOnAxis={undefined}
-          translateX={undefined}
-          translateY={undefined}
-          translateZ={undefined}
-          localToWorld={undefined}
-          worldToLocal={undefined}
-          lookAt={undefined}
-          add={undefined}
-          remove={undefined}
-          removeFromParent={undefined}
-          clear={undefined}
-          getObjectById={undefined}
-          getObjectByName={undefined}
-          getObjectByProperty={undefined}
-          getWorldPosition={undefined}
-          getWorldQuaternion={undefined}
-          getWorldScale={undefined}
-          raycast={undefined}
-          traverse={undefined}
-          traverseVisible={undefined}
-          traverseAncestors={undefined}
-          updateMatrix={undefined}
-          updateWorldMatrix={undefined}
-          toJSON={undefined}
-          clone={undefined}
-          copy={undefined}
-          addEventListener={undefined}
-          hasEventListener={undefined}
-          removeEventListener={undefined}
-          dispatchEvent={undefined}
-        />
-        <Suspense fallback={null}>
-          <ImageTracker
-            targetImage={targetImage}
-            key={undefined}
-            rotateX={undefined}
-            id={undefined}
-            attach={undefined}
-            onUpdate={undefined}
-            args={undefined}
-            updateMatrixWorld={undefined}
-            getWorldDirection={undefined}
-            uuid={undefined}
-            name={undefined}
-            type={undefined}
-            parent={undefined}
-            modelViewMatrix={undefined}
-            normalMatrix={undefined}
-            matrixWorld={undefined}
-            matrixAutoUpdate={undefined}
-            matrixWorldAutoUpdate={undefined}
-            matrixWorldNeedsUpdate={undefined}
-            visible={undefined}
-            castShadow={undefined}
-            receiveShadow={undefined}
-            frustumCulled={undefined}
-            renderOrder={undefined}
-            userData={undefined}
-            customDepthMaterial={undefined}
-            customDistanceMaterial={undefined}
-            isObject3D={undefined}
-            onBeforeRender={undefined}
-            onAfterRender={undefined}
-            applyMatrix4={undefined}
-            applyQuaternion={undefined}
-            setRotationFromAxisAngle={undefined}
-            setRotationFromEuler={undefined}
-            setRotationFromMatrix={undefined}
-            setRotationFromQuaternion={undefined}
-            rotateOnAxis={undefined}
-            rotateOnWorldAxis={undefined}
-            rotateY={undefined}
-            rotateZ={undefined}
-            translateOnAxis={undefined}
-            translateX={undefined}
-            translateY={undefined}
-            translateZ={undefined}
-            localToWorld={undefined}
-            worldToLocal={undefined}
-            lookAt={undefined}
-            add={undefined}
-            remove={undefined}
-            removeFromParent={undefined}
-            clear={undefined}
-            getObjectById={undefined}
-            getObjectByName={undefined}
-            getObjectByProperty={undefined}
-            getWorldPosition={undefined}
-            getWorldQuaternion={undefined}
-            getWorldScale={undefined}
-            raycast={undefined}
-            traverse={undefined}
-            traverseVisible={undefined}
-            traverseAncestors={undefined}
-            updateMatrix={undefined}
-            updateWorldMatrix={undefined}
-            toJSON={undefined}
-            clone={undefined}
-            copy={undefined}
-            addEventListener={undefined}
-            hasEventListener={undefined}
-            removeEventListener={undefined}
-            dispatchEvent={undefined}
-            anchorId={undefined}
-            isReady={undefined}
-            currentAnchor={undefined}
-            isGroup={undefined}
-          >
+      <ZapparCamera {...({} as any)} />
+      <Suspense fallback={null}>
+          <ImageTracker targetImage={targetImage}  {...({} as any)}>
             <React.Suspense fallback={null}>
               <Model />
             </React.Suspense>
