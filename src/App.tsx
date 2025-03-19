@@ -10,8 +10,8 @@ import {
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-import glb from "/unity-ar/waving.glb";
-import targetImage from "/unity-ar/example-tracking-image.zpt";
+import glb from "./assets/waving.glb";
+import targetImage from "./assets/example-tracking-image.zpt";
 
 let action: THREE.AnimationAction;
 
