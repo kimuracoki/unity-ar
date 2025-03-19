@@ -11,7 +11,9 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.1.0",
     "@zappar/zappar": "^2.2.7",
+    "@zappar/zappar-react-three-fiber": "^2.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
