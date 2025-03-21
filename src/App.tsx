@@ -11,7 +11,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import glb from "./assets/waving.glb";
-import targetImage from "./assets/example-tracking-image.zpt";
+import targetImage from "./assets/flier.zpt";
 import soundFile from "./assets/sound.mp3"; // 音声ファイルのインポート
 import useSound from "use-sound";
 
