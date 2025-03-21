@@ -61,7 +61,7 @@ function App() {
         tabIndex={0}
         onClick={handleClick} // ボタンクリック時に音声とアニメーションを再生
       >
-        Play Animation
+      話をきいてみる
       </div>
     </>
   );
